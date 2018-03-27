@@ -1,0 +1,29 @@
+@startuml
+start
+:安排考试;
+:考试安排表;
+:出卷;
+fork
+:打印审批表;
+:审批签字;
+:打印审批表;
+fork again
+:A、B试卷;
+end fork
+:打印试卷;
+:试卷;
+:参加考试;
+:答卷;
+:阅卷出成绩;
+fork
+:答卷;
+:装订存档;
+fork again
+:成绩单;
+if(有不及格?) then (有)
+:安排补考;
+endif
+end fork
+:期末流程结束;
+stop
+@enduml
