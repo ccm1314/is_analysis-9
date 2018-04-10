@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam handwritten true
+skinparam usecase{
+    BackgroundColor pink
+    BorderColor pastel blue
+}
+图书管理员 as admin
+会员 as vip
+非会员 as nvip
+rectangle 图书管理系统{
+    admin --> (添加新书)
+    admin --> (增加会员)
+    admin --> (登记借书)
+    admin --> (登记还书)
+    admin --> (维护读者信息)
+    vip --> (借阅书籍)
+    vip --> (归还书籍)
+    nvip --> (查阅书籍)
+}
+@enduml
