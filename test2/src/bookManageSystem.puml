@@ -9,13 +9,14 @@ skinparam usecase{
 会员 as vip
 非会员 as nvip
 rectangle 图书管理系统{
-    admin --> (添加新书)
-    admin --> (增加会员)
-    admin --> (登记借书)
-    admin --> (登记还书)
+    admin --> (管理书籍)
+    admin --> (管理会员机制)
+    admin --> (登记借/还书)
     admin --> (维护读者信息)
     vip --> (借阅书籍)
     vip --> (归还书籍)
+    vip --> (预约书籍)
+    vip --> (查询借阅记录)
     nvip --> (查阅书籍)
 }
 @enduml

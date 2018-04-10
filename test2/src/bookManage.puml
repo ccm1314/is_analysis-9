@@ -1,0 +1,17 @@
+@startuml
+:图书管理;
+fork
+:新增书籍;
+:刷新书籍记录;
+fork again
+:删除书籍;
+:刷新书籍记录;
+fork again
+:查询书籍;
+:查询结果;
+fork again
+:修改书籍;
+:刷新书籍记录;
+end fork
+:管理结束;
+@enduml
