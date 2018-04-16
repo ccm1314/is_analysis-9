@@ -1,0 +1,5 @@
+@startuml
+Object 书籍类型
+书籍类型 : 编号 654312
+书籍类型 : 类型 科幻
+@enduml

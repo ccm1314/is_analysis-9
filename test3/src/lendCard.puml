@@ -1,0 +1,6 @@
+@startuml
+Object 借书证
+借书证 : 借书证号 2524562
+借书证 : 姓名 aaa
+借书证 : 类别 会员
+@enduml
