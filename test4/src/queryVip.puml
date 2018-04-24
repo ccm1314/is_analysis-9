@@ -1,0 +1,17 @@
+@startuml
+hide footbox
+
+actor 读者
+actor 管理员
+
+participant 会员记录
+participant 书籍记录
+participant 借书记录
+
+activate 管理员
+
+
+管理员->会员记录:查询会员
+会员记录->管理员:查询成功
+
+@enduml

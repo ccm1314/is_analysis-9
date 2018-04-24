@@ -1,0 +1,18 @@
+@startuml
+hide footbox
+
+actor 读者
+actor 管理员
+
+participant 会员记录
+participant 书籍记录
+participant 借书记录
+
+activate 管理员
+
+
+管理员->书籍记录:修改书籍信息
+书籍记录->借书记录:查看是否已被借阅
+[<--借书记录:已被借阅，修改书籍失败
+借书记录->管理员:未被借阅，修改书籍成功
+@enduml

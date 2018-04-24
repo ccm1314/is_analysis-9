@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+
+actor 读者
+actor 管理员
+
+participant 会员记录
+participant 书籍记录
+participant 借书记录
+
+activate 管理员
+
+读者->管理员:发起还书请求
+activate 读者
+
+管理员->借书记录:查看借书记录，登记还书
+借书记录->读者:还书成功
+deactivate 读者
+@enduml
