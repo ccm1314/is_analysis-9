@@ -40,7 +40,7 @@
 
 1. 获取全部已借图书
 
-- 功能：用于获取所有已借图书
+- 功能：用于获取所有已有图书
 - 请求地址： http://[YOUR_DOMAIN]/selectAllLend.action
 - 请求方法：get
 - 请求参数：无
