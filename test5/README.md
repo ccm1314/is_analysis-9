@@ -9,14 +9,14 @@
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |book_id|int(11)|主键|否||||
-|book_type|varchar2(100)|外键|否||||
+|book_type|varchar2(100)|外键|否| | |图书类型|
 |book_name|varchar2(100)| |否||||
 |book_publisher|varchar2(100)| |否||||
 |book_date|datetime(0)| |否||||
 |book_author|varchar2(100)| |否||||
 |book_price|decimal(10)| |否||||
-|book_total|varchar2(100)| |否||||
-|book_temp|varchar2(100)| |是||||
+|book_total|varchar2(100)| |否| | |总共数量|
+|book_temp|varchar2(100)| |是| | |现有数量|
 
 ## 1.2.管理表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
@@ -24,7 +24,7 @@
 |manage_id|int(11)|主键|否||||
 |name|varchar2(100)| |否||||
 |password|varchar2(100)| |否||||
-|contact_method|varchar2(100)| |否||||
+|contact_method|varchar2(100)| |否| | |联系方式|
 
 ## 1.3.图书类型表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
@@ -37,15 +37,15 @@
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |lend_id|int(11)|主键|否||||
 |name|varchar2(100)| |否||||
-|type|varchar2(100)| |否||||
+|type|varchar2(100)| |否| | |是否会员|
 
 ## 1.5.借书记录表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |book_id|int(11)|主键|否||||
 |lend_id|int(11)|外键|否||||
-|lend_date|datetime(0)| |否||||
-|return_date|datetime(0)| |否||||
+|lend_date|datetime(0)| |否| | |借书日期|
+|return_date|datetime(0)| |否| | |还书日期|
 |manage_id|int(11)|外键|否||||
 
 
