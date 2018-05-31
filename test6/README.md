@@ -18,10 +18,10 @@
 
 界面设计参见：
 
-## 3. 用例图设计 [源码](src/testManagePlatform.puml)
+## 3. 用例图设计 [源码](./src/testManagePlatform.puml)
 ![](testManagePlatform.png)
 
-## 4. 类图设计 [源码](src/classPicture.puml)
+## 4. 类图设计 [源码](./src/classPicture.puml)
 ![](./class.png)
 
 ## 5. 数据库设计
