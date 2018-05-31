@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+
+actor 老师
+
+participant 学生成绩
+
+activate 老师
+老师->学生成绩:进行CRUD
+学生成绩->老师:成功
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+
+actor 学生
+
+participant 作业提交记录
+
+activate 学生
+学生->作业提交记录:提交登记
+作业提交记录->学生:成功登记
+@enduml

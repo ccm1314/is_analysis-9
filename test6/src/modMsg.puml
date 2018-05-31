@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+
+actor 用户
+
+participant 用户信息
+participant 用户类别
+
+activate 用户
+用户->用户信息:发出相关数据修改请求
+用户信息->用户类别:验证用户身份
+用户类别->用户信息:修改
+用户信息->用户:修改成功
+
+@enduml

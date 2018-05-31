@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+
+actor 游客
+
+participant 用户记录
+
+activate 游客
+游客->用户记录:查看用户列表
+用户记录->游客:显示列表
+@enduml

@@ -1,0 +1,77 @@
+@startuml
+package "实验管理平台"{
+        class 用户{
+            __private__
+            -long 编号
+            -String 姓名
+            -String 密码
+            -Date 修改信息日期
+            __省略getter/setter方法__
+        }
+
+        class 学生{
+            -long 用户编号
+            -long 学号
+            -String 班级
+            -String github用户名
+            __省略getter/setter方法__
+        }
+
+        class 老师{
+            -long user编号
+            -long 工号
+            __省略getter/setter方法__
+        }
+
+        class 课程{
+            __private__
+            -long 课程ID
+            -String 课程名称
+            __省略getter/setter方法__
+        }
+
+        class 学生选课表{
+            __private__
+            -long id
+            -long 学号
+            -String 学生姓名
+            -long 课程ID
+            -String 课程名称
+            -int A评分项
+            -String A评价
+            -int B评分项
+            -String B评价
+            -int C评分项
+            -String C评价
+            -int D评分项
+            -String D评价
+            -int 总成绩(0-100)
+            -String 第几学期#第几次实验
+            -int 实际上交时间
+
+            __省略getter/setter方法__
+        }
+
+        class 老师选课表{
+            __private__
+            -long id
+            -long 学号
+            -String 老师姓名
+            -long 课程ID
+            -String 课程名称
+            -int 第几学期#第几次实验
+            -String 作业详细
+            -Date 规定上交时间
+            __省略getter/setter方法__
+        }
+        用户 "1" -- "1" 老师 : 老师继承用户
+        用户 "1" -- "1" 学生 : 学生继承用户
+        老师 "1" -- "n" 老师选课表 : 一个老师可以选多门课
+        课程 "1" -- "n" 老师选课表 : 一个老师可以选多门课
+        学生 "1" -- "n" 学生选课表 : 一个学生可以选多门课
+        课程 "1" -- "n" 学生选课表 : 一个学生可以选多门课
+
+
+
+}
+@enduml

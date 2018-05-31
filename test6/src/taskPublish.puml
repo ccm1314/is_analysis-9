@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+
+actor 老师
+
+participant 作业记录
+
+activate 老师
+老师->作业记录:发布作业
+作业记录->老师:成功发布
+@enduml

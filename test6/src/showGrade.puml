@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+
+actor 学生
+
+participant 学生课程
+participant 课程实验
+participant 学生成绩
+
+activate 学生
+学生->学生课程:发出查看成绩请求
+学生课程->课程实验:某次实验
+课程实验->学生成绩:查询具体成绩
+学生成绩->学生:返回成绩列表
+
+@enduml

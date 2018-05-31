@@ -1,0 +1,33 @@
+@startuml
+title 基于GitHub的实验管理平台--用例图
+'left to right direction
+'skinparam handwritten true
+'skinparam usecase{
+'    BackgroundColor pink
+'    BorderColor pastel blue
+'}
+
+actor tch
+actor stu
+actor users
+
+rectangle 用户公用{
+    users --> (查看学生列表)
+    users --> (修改个人信息)
+    users --> (登录)
+    users --> (登出)
+
+}
+
+users <|-- tch
+users <|-- stu
+
+
+
+rectangle 业务{
+    tch --> (管理学生成绩)
+    tch --> (管理作业信息)
+    stu --> (查看个人成绩)
+    stu --> (提交作业登记)
+}
+@enduml
