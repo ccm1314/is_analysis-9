@@ -8,5 +8,4 @@
 out
 gen
 .gitignore
-.idea/
-test1/test1.iml
+*.puml
