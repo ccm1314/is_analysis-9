@@ -7,7 +7,7 @@ participant 用户记录
 participant 用户类别
 
 activate 游客
-游客->用户记录:增加书籍
+游客->用户记录:ID,密码
 用户记录->用户类别:验证用户身份
 用户类别->游客:登录成功
 @enduml
